@@ -21,6 +21,7 @@ const Team = (props: TeamProps) => {
             name={office.name}
             office={office.office}
             image={office.image}
+            date={office.date}
           />
         ))}
       </div>

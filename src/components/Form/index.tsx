@@ -15,14 +15,16 @@ const Form = (props: FormProps) => {
   const [office, setOffice] = useState("");
   const [image, setImage] = useState("");
   const [team, setTeam] = useState("");
+  const [date, setDate] = useState("");
 
   const onSave = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    props.onCollaboratorSaved({ name, office, image, team });
+    props.onCollaboratorSaved({ name, office, image, team, date });
     setName("");
     setOffice("");
     setImage("");
     setTeam("");
+    setDate("");
   };
 
   return (
@@ -48,6 +50,13 @@ const Form = (props: FormProps) => {
           placeholder="Digite o endereço da imagem"
           value={image}
           onChanged={(value) => setImage(value)}
+        />
+        <InputText
+          label="Data"
+          placeholder=""
+          value={date}
+          onChanged={(value) => setDate(value)}
+          type="date"
         />
         <DropdownList
           value={team}

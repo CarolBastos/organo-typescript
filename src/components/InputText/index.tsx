@@ -7,6 +7,7 @@ interface InputTextProps {
   label: string;
   value: string;
   required?: boolean;
+  type?: "number" | "text" | "date" | "password" | "email";
 }
 
 const InputText = ({
@@ -14,6 +15,7 @@ const InputText = ({
   placeholder,
   label,
   value,
+  type = "text",
   required = false,
 }: InputTextProps) => {
   const placeholderModifier = `${placeholder}...`;
@@ -30,6 +32,7 @@ const InputText = ({
         onChange={onTyped}
         required={required}
         placeholder={placeholderModifier}
+        type={type}
       ></input>
     </div>
   );
