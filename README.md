@@ -1,1 +1,1 @@
-Versão publicada: https://curso-react-k50ccd7dp-carolbastos.vercel.app/
+Versão publicada: https://organo-typescript-m9n8msi9z-carolbastos.vercel.app/
