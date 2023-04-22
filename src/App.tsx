@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Banner from "./components/Banner/Banner";
 import Form from "./components/Form";
 import Team from "./components/Team";
+import Banner from "./components/Banner";
+import { ICollaborator } from "./shared/interfaces/ICollaborator";
 
 function App() {
   const teams = [
@@ -41,15 +42,15 @@ function App() {
       secondaryColor: "#FFEEDF",
     },
   ];
-  const [collaborators, setCollaborators] = useState([]);
+  const [collaborators, setCollaborators] = useState<ICollaborator[]>([]);
 
-  const onNewColaboratorAdd = (collaborator) => {
+  const onNewColaboratorAdd = (collaborator: ICollaborator) => {
     setCollaborators([...collaborators, collaborator]);
   };
 
   return (
     <div className="App">
-      <Banner />
+      <Banner src="/images/banner.png" />
       <Form
         teams={teams.map((team) => team.name)}
         onCollaboratorSaved={(collaborator) =>

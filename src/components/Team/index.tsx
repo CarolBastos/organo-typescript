@@ -1,7 +1,15 @@
+import { ICollaborator } from "../../shared/interfaces/ICollaborator";
 import Collaborator from "../Collaborator";
 import "./Team.css";
 
-const Team = (props) => {
+interface TeamProps {
+  primaryColor: string;
+  secondaryColor: string;
+  name: string;
+  collaborators: ICollaborator[];
+}
+
+const Team = (props: TeamProps) => {
   return props.collaborators.length > 0 ? (
     <section className="team" style={{ backgroundColor: props.secondaryColor }}>
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
@@ -18,7 +26,7 @@ const Team = (props) => {
       </div>
     </section>
   ) : (
-    ""
+    <></>
   );
 };
 

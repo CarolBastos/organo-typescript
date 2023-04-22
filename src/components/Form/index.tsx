@@ -1,16 +1,22 @@
 import { useState } from "react";
+import { ICollaborator } from "../../shared/interfaces/ICollaborator";
 import Button from "../Button";
 import DropdownList from "../DropdownList";
 import InputText from "../InputText";
 import "./Form.css";
 
-const Form = (props) => {
+interface FormProps {
+  onCollaboratorSaved: (collaborator: ICollaborator) => void;
+  teams: string[];
+}
+
+const Form = (props: FormProps) => {
   const [name, setName] = useState("");
   const [office, setOffice] = useState("");
   const [image, setImage] = useState("");
   const [team, setTeam] = useState("");
 
-  const onSave = (event) => {
+  const onSave = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     props.onCollaboratorSaved({ name, office, image, team });
     setName("");
