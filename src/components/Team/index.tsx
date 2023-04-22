@@ -11,7 +11,13 @@ interface TeamProps {
 
 const Team = (props: TeamProps) => {
   return props.collaborators.length > 0 ? (
-    <section className="team" style={{ backgroundColor: props.secondaryColor }}>
+    <section
+      className="team"
+      style={{
+        backgroundImage: "url(/images/fundo.png)",
+        backgroundColor: props.secondaryColor,
+      }}
+    >
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
       <div className="collaborators">
         {props.collaborators.map((office) => (
