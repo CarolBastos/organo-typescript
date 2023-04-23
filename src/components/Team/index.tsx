@@ -23,8 +23,8 @@ const Team = ({ team, collaborators, onDelete, changeColor }: TeamProps) => {
       <input
         value={team.color}
         type="color"
-        className="input-color"
-        onChange={(event) => changeColor(event.target.value, team.id)}
+        className="input-color-collaborators"
+        onChange={(event) => changeColor(event.target.value, team.id!)}
       ></input>
       <h3 style={{ borderColor: team.color }}>{team.name}</h3>
       <div className="collaborators">

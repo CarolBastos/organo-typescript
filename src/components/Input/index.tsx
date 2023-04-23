@@ -1,23 +1,23 @@
 import React from "react";
-import "./InputText.css";
+import "./Input.css";
 
-interface InputTextProps {
+interface InputProps {
   onChanged: (value: string) => void;
   placeholder: string;
   label: string;
   value: string;
   required?: boolean;
-  type?: "number" | "text" | "date" | "password" | "email";
+  type?: "number" | "text" | "date" | "password" | "email" | "color";
 }
 
-const InputText = ({
+const Input = ({
   onChanged,
   placeholder,
   label,
   value,
   type = "text",
   required = false,
-}: InputTextProps) => {
+}: InputProps) => {
   const placeholderModifier = `${placeholder}...`;
 
   const onTyped = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +25,7 @@ const InputText = ({
   };
 
   return (
-    <div className="input-text">
+    <div className={`input input-${type}`}>
       <label>{label}</label>
       <input
         value={value}
@@ -38,4 +38,4 @@ const InputText = ({
   );
 };
 
-export default InputText;
+export default Input;

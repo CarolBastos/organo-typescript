@@ -287,10 +287,15 @@ function App() {
     );
   }
 
+  function createTime(newTeam: ITeam) {
+    setTeams([...teams, { ...newTeam }]);
+  }
+
   return (
     <div className="App">
       <Banner src="/images/banner.png" />
       <Form
+        createTime={createTime}
         teams={teams.map((team) => team.name)}
         onCollaboratorSaved={(collaborator) =>
           onNewColaboratorAdd(collaborator)
