@@ -1,35 +1,43 @@
 import { ICollaborator } from "../../shared/interfaces/ICollaborator";
+import { ITeam } from "../../shared/interfaces/ITeam";
 import Collaborator from "../Collaborator";
 import "./Team.css";
+import hexToRgba from "hex-to-rgba";
 
 interface TeamProps {
-  primaryColor: string;
-  secondaryColor: string;
-  name: string;
   collaborators: ICollaborator[];
+  team: ITeam;
+  onDelete: (id: string) => void;
+  changeColor: (value: string, name: string) => void;
 }
 
-const Team = (props: TeamProps) => {
-  return props.collaborators.length > 0 ? (
+const Team = ({ team, collaborators, onDelete, changeColor }: TeamProps) => {
+  return collaborators.length > 0 ? (
     <section
       className="team"
       style={{
         backgroundImage: "url(/images/fundo.png)",
-        backgroundColor: props.secondaryColor,
+        backgroundColor: hexToRgba(team.color, "0.6"),
       }}
     >
-      <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
+      <input
+        value={team.color}
+        type="color"
+        className="input-color"
+        onChange={(event) => changeColor(event.target.value, team.id)}
+      ></input>
+      <h3 style={{ borderColor: team.color }}>{team.name}</h3>
       <div className="collaborators">
-        {props.collaborators.map((office) => (
-          <Collaborator
-            backgroundColor={props.primaryColor}
-            key={office.name}
-            name={office.name}
-            office={office.office}
-            image={office.image}
-            date={office.date}
-          />
-        ))}
+        {collaborators.map((collaborator) => {
+          return (
+            <Collaborator
+              backgroundColor={team.color}
+              key={collaborator.name}
+              collaborator={collaborator}
+              onDelete={onDelete}
+            />
+          );
+        })}
       </div>
     </section>
   ) : (

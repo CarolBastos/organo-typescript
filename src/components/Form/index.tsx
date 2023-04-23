@@ -16,15 +16,17 @@ const Form = (props: FormProps) => {
   const [image, setImage] = useState("");
   const [team, setTeam] = useState("");
   const [date, setDate] = useState("");
+  const [id, setId] = useState("");
 
   const onSave = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    props.onCollaboratorSaved({ name, office, image, team, date });
+    props.onCollaboratorSaved({ name, office, image, team, date, id });
     setName("");
     setOffice("");
     setImage("");
     setTeam("");
     setDate("");
+    setId("");
   };
 
   return (

@@ -1,4 +1,5 @@
 export interface ICollaborator {
+  id: string;
   name: string;
   office: string;
   image: string;

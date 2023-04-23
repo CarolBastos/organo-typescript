@@ -1,29 +1,33 @@
+import { AiFillCloseCircle } from "react-icons/ai";
+import { ICollaborator } from "../../shared/interfaces/ICollaborator";
 import "./Collaborator.css";
 
 interface CollaboratorProps {
-  name: string;
-  image: string;
-  office: string;
-  date: string;
+  collaborator: ICollaborator;
   backgroundColor: string;
+  onDelete: (id: string) => void;
 }
 
 const Collaborator = ({
-  name,
-  image,
-  office,
+  collaborator,
   backgroundColor,
-  date,
+  onDelete,
 }: CollaboratorProps) => {
   return (
     <div className="colaborator">
+      <AiFillCloseCircle
+        size={25}
+        className="delete"
+        onClick={() => onDelete(collaborator.id)}
+      />
+
       <div className="header" style={{ backgroundColor: backgroundColor }}>
-        <img src={image} alt={name} />
+        <img src={collaborator.image} alt={collaborator.name} />
       </div>
       <div className="footer">
-        <h4>{name}</h4>
-        <h5>{office}</h5>
-        <h5>{new Date(date).toLocaleDateString()}</h5>
+        <h4>{collaborator.name}</h4>
+        <h5>{collaborator.office}</h5>
+        <h5>{new Date(collaborator.date).toLocaleDateString()}</h5>
       </div>
     </div>
   );

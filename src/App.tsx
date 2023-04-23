@@ -3,48 +3,51 @@ import Form from "./components/Form";
 import Team from "./components/Team";
 import Banner from "./components/Banner";
 import { ICollaborator } from "./shared/interfaces/ICollaborator";
+import { ITeam } from "./shared/interfaces/ITeam";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  const teams = [
+  const [teams, setTeams] = useState([
     {
+      id: uuidv4(),
       name: "Programação",
-      primaryColor: "#57c278",
-      secondaryColor: "#d9f7e9",
+      color: "#57c278",
     },
     {
+      id: uuidv4(),
       name: "Frontend",
-      primaryColor: "#82CFFA",
-      secondaryColor: "#E8F8FF",
+      color: "#82CFFA",
     },
     {
+      id: uuidv4(),
       name: "Data Science",
-      primaryColor: "#A6D157",
-      secondaryColor: "#F0F8E2",
+      color: "#A6D157",
     },
     {
+      id: uuidv4(),
       name: "Devops",
-      primaryColor: "#E06B69",
-      secondaryColor: "#FDE7E8",
+      color: "#E06B69",
     },
     {
+      id: uuidv4(),
       name: "UX e Design",
-      primaryColor: "#DB6EBF",
-      secondaryColor: "#FAE9F5",
+      color: "#DB6EBF",
     },
     {
+      id: uuidv4(),
       name: "Mobile",
-      primaryColor: "#FFBA05",
-      secondaryColor: "#FFF5D9",
+      color: "#FFBA05",
     },
     {
+      id: uuidv4(),
       name: "Inovação e Gestão",
-      primaryColor: "#FF8A29",
-      secondaryColor: "#FFEEDF",
+      color: "#FF8A29",
     },
-  ];
+  ] as ITeam[]);
 
   const initial = [
     {
+      id: uuidv4(),
       name: "JULIANA AMOASEI",
       office: "Desenvolvedora de software e instrutora",
       date: "10-10-2022",
@@ -53,6 +56,7 @@ function App() {
       team: teams[0].name,
     },
     {
+      id: uuidv4(),
       name: "DANIEL ARTINE",
       office: "Engenheiro de Software na Stone Age",
       date: "10-10-2022",
@@ -61,6 +65,7 @@ function App() {
       team: teams[0].name,
     },
     {
+      id: uuidv4(),
       name: "GUILHERME LIMA",
       office: "Desenvolvedor Python e JavaScript na Alura",
       date: "10-10-2022",
@@ -69,6 +74,7 @@ function App() {
       team: teams[0].name,
     },
     {
+      id: uuidv4(),
       name: "PAULO SILVEIRA",
       office: "Hipster e CEO da Alura",
       date: "10-10-2022",
@@ -77,6 +83,7 @@ function App() {
       team: teams[0].name,
     },
     {
+      id: uuidv4(),
       name: "JULIANA AMOASEI",
       office: "Desenvolvedora de software e instrutora",
       date: "10-10-2022",
@@ -85,6 +92,7 @@ function App() {
       team: teams[1].name,
     },
     {
+      id: uuidv4(),
       name: "DANIEL ARTINE",
       office: "Engenheiro de Software na Stone Age",
       date: "10-10-2022",
@@ -93,6 +101,7 @@ function App() {
       team: teams[1].name,
     },
     {
+      id: uuidv4(),
       name: "GUILHERME LIMA",
       office: "Desenvolvedor Python e JavaScript na Alura",
       date: "10-10-2022",
@@ -101,6 +110,7 @@ function App() {
       team: teams[1].name,
     },
     {
+      id: uuidv4(),
       name: "PAULO SILVEIRA",
       office: "Hipster e CEO da Alura",
       date: "10-10-2022",
@@ -109,6 +119,7 @@ function App() {
       team: teams[1].name,
     },
     {
+      id: uuidv4(),
       name: "JULIANA AMOASEI",
       office: "Desenvolvedora de software e instrutora",
       date: "10-10-2022",
@@ -117,6 +128,7 @@ function App() {
       team: teams[2].name,
     },
     {
+      id: uuidv4(),
       name: "DANIEL ARTINE",
       office: "Engenheiro de Software na Stone Age",
       date: "10-10-2022",
@@ -125,6 +137,7 @@ function App() {
       team: teams[2].name,
     },
     {
+      id: uuidv4(),
       name: "GUILHERME LIMA",
       office: "Desenvolvedor Python e JavaScript na Alura",
       date: "10-10-2022",
@@ -133,6 +146,7 @@ function App() {
       team: teams[2].name,
     },
     {
+      id: uuidv4(),
       name: "PAULO SILVEIRA",
       office: "Hipster e CEO da Alura",
       date: "10-10-2022",
@@ -141,6 +155,7 @@ function App() {
       team: teams[2].name,
     },
     {
+      id: uuidv4(),
       name: "JULIANA AMOASEI",
       office: "Desenvolvedora de software e instrutora",
       date: "10-10-2022",
@@ -149,6 +164,7 @@ function App() {
       team: teams[3].name,
     },
     {
+      id: uuidv4(),
       name: "DANIEL ARTINE",
       office: "Engenheiro de Software na Stone Age",
       date: "10-10-2022",
@@ -157,6 +173,7 @@ function App() {
       team: teams[3].name,
     },
     {
+      id: uuidv4(),
       name: "GUILHERME LIMA",
       office: "Desenvolvedor Python e JavaScript na Alura",
       date: "10-10-2022",
@@ -165,6 +182,7 @@ function App() {
       team: teams[3].name,
     },
     {
+      id: uuidv4(),
       name: "PAULO SILVEIRA",
       office: "Hipster e CEO da Alura",
       date: "10-10-2022",
@@ -173,6 +191,7 @@ function App() {
       team: teams[3].name,
     },
     {
+      id: uuidv4(),
       name: "JULIANA AMOASEI",
       office: "Desenvolvedora de software e instrutora",
       date: "10-10-2022",
@@ -181,6 +200,7 @@ function App() {
       team: teams[4].name,
     },
     {
+      id: uuidv4(),
       name: "DANIEL ARTINE",
       office: "Engenheiro de Software na Stone Age",
       date: "10-10-2022",
@@ -189,6 +209,7 @@ function App() {
       team: teams[4].name,
     },
     {
+      id: uuidv4(),
       name: "GUILHERME LIMA",
       office: "Desenvolvedor Python e JavaScript na Alura",
       date: "10-10-2022",
@@ -197,6 +218,7 @@ function App() {
       team: teams[4].name,
     },
     {
+      id: uuidv4(),
       name: "PAULO SILVEIRA",
       office: "Hipster e CEO da Alura",
       date: "10-10-2022",
@@ -205,6 +227,7 @@ function App() {
       team: teams[4].name,
     },
     {
+      id: uuidv4(),
       name: "JULIANA AMOASEI",
       office: "Desenvolvedora de software e instrutora",
       date: "10-10-2022",
@@ -213,6 +236,7 @@ function App() {
       team: teams[5].name,
     },
     {
+      id: uuidv4(),
       name: "DANIEL ARTINE",
       office: "Engenheiro de Software na Stone Age",
       date: "10-10-2022",
@@ -221,6 +245,7 @@ function App() {
       team: teams[5].name,
     },
     {
+      id: uuidv4(),
       name: "GUILHERME LIMA",
       office: "Desenvolvedor Python e JavaScript na Alura",
       date: "10-10-2022",
@@ -229,6 +254,7 @@ function App() {
       team: teams[5].name,
     },
     {
+      id: uuidv4(),
       name: "PAULO SILVEIRA",
       office: "Hipster e CEO da Alura",
       date: "10-10-2022",
@@ -242,6 +268,24 @@ function App() {
   const onNewColaboratorAdd = (collaborator: ICollaborator) => {
     setCollaborators([...collaborators, collaborator]);
   };
+
+  function deletingCollaborator(id: string) {
+    setCollaborators(
+      collaborators.filter((collaborator) => collaborator.id !== id)
+    );
+  }
+
+  function changeColorTeam(color: string, id: string) {
+    setTeams(
+      teams.map((team) => {
+        if (team.id === id) {
+          team.color = color;
+        }
+
+        return team;
+      })
+    );
+  }
 
   return (
     <div className="App">
@@ -258,12 +302,12 @@ function App() {
         {teams.map((team) => (
           <Team
             key={team.name}
-            name={team.name}
-            primaryColor={team.primaryColor}
-            secondaryColor={team.secondaryColor}
+            changeColor={changeColorTeam}
+            team={team}
             collaborators={collaborators.filter(
               (collaborator) => collaborator.team === team.name
             )}
+            onDelete={deletingCollaborator}
           />
         ))}
       </section>
