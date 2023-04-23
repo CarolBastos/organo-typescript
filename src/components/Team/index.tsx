@@ -9,9 +9,16 @@ interface TeamProps {
   team: ITeam;
   onDelete: (id: string) => void;
   changeColor: (value: string, name: string) => void;
+  onChangeFavorite: (id: string) => void;
 }
 
-const Team = ({ team, collaborators, onDelete, changeColor }: TeamProps) => {
+const Team = ({
+  team,
+  collaborators,
+  onDelete,
+  changeColor,
+  onChangeFavorite,
+}: TeamProps) => {
   return collaborators.length > 0 ? (
     <section
       className="team"
@@ -35,6 +42,7 @@ const Team = ({ team, collaborators, onDelete, changeColor }: TeamProps) => {
               key={collaborator.name}
               collaborator={collaborator}
               onDelete={onDelete}
+              onChangeFavorite={onChangeFavorite}
             />
           );
         })}

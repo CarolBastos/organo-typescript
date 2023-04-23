@@ -5,4 +5,5 @@ export interface ICollaborator {
   image: string;
   team?: string;
   date: string;
+  favorite?: boolean;
 }

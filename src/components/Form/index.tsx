@@ -24,7 +24,14 @@ const Form = (props: FormProps) => {
 
   const onSave = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    props.onCollaboratorSaved({ name, office, image, team, date, id });
+    props.onCollaboratorSaved({
+      name,
+      office,
+      image,
+      team,
+      date,
+      id,
+    });
     setName("");
     setOffice("");
     setImage("");

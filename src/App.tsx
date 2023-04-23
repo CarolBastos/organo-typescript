@@ -54,6 +54,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
       team: teams[0].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -63,6 +64,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
       team: teams[0].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -72,6 +74,7 @@ function App() {
       image:
         "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
       team: teams[0].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -81,6 +84,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
       team: teams[0].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -90,6 +94,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
       team: teams[1].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -99,6 +104,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
       team: teams[1].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -108,6 +114,7 @@ function App() {
       image:
         "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
       team: teams[1].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -117,6 +124,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
       team: teams[1].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -126,6 +134,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
       team: teams[2].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -135,6 +144,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
       team: teams[2].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -144,6 +154,7 @@ function App() {
       image:
         "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
       team: teams[2].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -153,6 +164,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
       team: teams[2].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -162,6 +174,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
       team: teams[3].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -171,6 +184,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
       team: teams[3].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -180,6 +194,7 @@ function App() {
       image:
         "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
       team: teams[3].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -189,6 +204,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
       team: teams[3].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -198,6 +214,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
       team: teams[4].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -207,6 +224,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
       team: teams[4].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -216,6 +234,7 @@ function App() {
       image:
         "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
       team: teams[4].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -225,6 +244,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
       team: teams[4].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -234,6 +254,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg",
       team: teams[5].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -243,6 +264,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg",
       team: teams[5].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -252,6 +274,7 @@ function App() {
       image:
         "	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg",
       team: teams[5].name,
+      favorite: false,
     },
     {
       id: uuidv4(),
@@ -261,6 +284,7 @@ function App() {
       image:
         "https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg",
       team: teams[5].name,
+      favorite: false,
     },
   ] as ICollaborator[];
   const [collaborators, setCollaborators] = useState<ICollaborator[]>(initial);
@@ -283,6 +307,18 @@ function App() {
         }
 
         return team;
+      })
+    );
+  }
+
+  function changeFavorite(id: string) {
+    setCollaborators(
+      collaborators.filter((collaborator) => {
+        if (collaborator.id === id) {
+          collaborator.favorite = !collaborator.favorite;
+        }
+
+        return collaborator;
       })
     );
   }
@@ -313,6 +349,7 @@ function App() {
               (collaborator) => collaborator.team === team.name
             )}
             onDelete={deletingCollaborator}
+            onChangeFavorite={changeFavorite}
           />
         ))}
       </section>
