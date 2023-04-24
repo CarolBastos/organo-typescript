@@ -40,11 +40,4 @@ npm install
 npm start
 ```
 
-<div>
-<a href="https://github.com/CarolBastos">
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarolBastos&layout=compact&langs_count=7&theme=dracula"/>
-</div>
-
-</br>
-
 [Visite o site do projeto](https://organo-typescript-carolbastos.vercel.app/)
